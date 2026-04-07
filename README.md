@@ -1,6 +1,6 @@
 # fMRI Inflow Effect Quantification
 
-This repository contains MATLAB tools and scripts for simulating and quantifying inflow effects in functional Magnetic Resonance Imaging (fMRI). The project models CSF flow signal in different geometries — specifically pipes and funnels — and evaluates the robustness of these models against noise and geometric assumptions.
+This repository contains MATLAB tools and scripts for simulating and quantifying inflow effects in functional Magnetic Resonance Imaging (fMRI). The project models CSF flow signal in different geometries (pipes and funnels) and evaluates the robustness of these models against noise and geometric assumptions.
 
 ## Project Structure
 
@@ -16,8 +16,8 @@ The repository is organized into core simulation functions, signal generation to
 * `get_signal_profile.m`: Generates the specific inflow signal corresponding to a given flow profile.
 
 ### Experimental Investigations
-* `investigate_N.m`: A standalone script that investigates the impact of varying spatial resolutions on the simulated data.
-* `investigate_profile.m`: A script designed to analyze how different fluid flow profiles affect the resulting fMRI signal.
+* `investigate_N.m`: A script that investigates the impact of varying spatial resolutions on the simulated data.
+* `investigate_profile.m`: A script designed to analyze how different fluid flow profiles affect the resulting fMRI inflow signal.
 
 ## Validations
 
@@ -25,7 +25,7 @@ The repository includes two main validation pipelines to test the efficacy and l
 
 ### 1. Pipe Validation (Noise Robustness)
 **Files:** `pipe_validation.m`, `pipe_plots.m`
-These scripts represent the primary workflow for validating the pipe geometry model. The main objective of this validation is to test the model's resilience and determine how robust the pipe modeling is when subjected to varying levels of noise.
+These scripts represent the primary workflow for validating the pipe geometry model. The main objective of this validation is to test the model's resilience and determine how robust the pipe modeling is when subjected to noise.
 
 ### 2. Funnel Validation (Geometric Approximation)
 **Files:** `funnel_validation.m`, `funnel_plots.m`
