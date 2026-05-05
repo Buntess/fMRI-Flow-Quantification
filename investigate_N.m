@@ -191,7 +191,7 @@ figure();
 x_axis = 1:num_I;
 
 % Create the error bar plot
-plot(x_axis, rel_err_avg, '-o', 'LineWidth', 2.5, 'MarkerSize', 8,...
+plot(x_axis, rel_err_avg(num_I:-1:1), '-o', 'LineWidth', 2.5, 'MarkerSize', 8,...
     'MarkerFaceColor', '#D95319', 'Color', '#D95319');
 
 ax = gca();
@@ -208,7 +208,7 @@ ylim([-0.5 3.0])
 
 % Dynamically create tick labels if Nsteps_list is available
 if exist('Nsteps_list', 'var') && length(Nsteps_list) >= num_I
-    labels = arrayfun(@num2str, Nsteps_list(1:num_I), 'UniformOutput', false);
+    labels = arrayfun(@num2str, Nsteps_list(num_I:-1:1), 'UniformOutput', false);
     xticks(1:num_I);
     xticklabels(labels);
 else
